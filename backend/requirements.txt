@@ -4,3 +4,4 @@ ruff
 python-dotenv
 psycopg2-binary
 sqlalchemy
+alembic
