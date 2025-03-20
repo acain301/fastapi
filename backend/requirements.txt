@@ -1,3 +1,6 @@
 fastapi
 uvicorn
 ruff
+python-dotenv
+psycopg2-binary
+sqlalchemy
