@@ -7,3 +7,4 @@ sqlalchemy
 alembic
 pydantic[email]
 passlib[bcrypt]
+slugify

@@ -1,18 +1,19 @@
 from typing import Optional
 from pydantic import BaseModel, model_validator
 from datetime import date
+from slugify import slugify
 
 
 
 class CreateBlog(BaseModel):
     title: str 
-    slug: str 
+    # slug: str 
     content: Optional[str] = None 
     
     @model_validator(mode='before')
     def generate_slug(cls, values):
         if 'title' in values:
-            values['slug'] = values.get("title").replace(" ","-").lower()
+            values['slug'] = slugify(values.get("title"))
         return values
 
         
