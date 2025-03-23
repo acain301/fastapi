@@ -1,5 +1,5 @@
 from typing import Optional
-from pydantic import BaseModel, model_validator
+from pydantic import BaseModel, model_validator, PastDatetime
 from datetime import date
 from slugify import slugify
 
@@ -20,7 +20,7 @@ class CreateBlog(BaseModel):
 class ShowBlog(BaseModel):
     title:str 
     content: Optional[str]
-    created_at: date
+    created_at: PastDatetime
 
     class Config():
         orm_mode = True
