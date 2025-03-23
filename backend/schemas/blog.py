@@ -1,6 +1,5 @@
 from typing import Optional
 from pydantic import BaseModel, model_validator, PastDatetime
-from datetime import date
 from slugify import slugify
 
 
