@@ -6,7 +6,7 @@ from slugify import slugify
 
 class CreateBlog(BaseModel):
     title: str 
-    # slug: str 
+    slug: str 
     content: Optional[str] = None 
     
     @model_validator(mode='before')
@@ -23,3 +23,6 @@ class ShowBlog(BaseModel):
 
     class Config():
         orm_mode = True
+
+class UpdateBlog(CreateBlog):
+    pass
